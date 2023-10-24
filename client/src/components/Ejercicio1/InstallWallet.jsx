@@ -6,8 +6,9 @@ export default function InstallWallet () {
 
     const [connected, setConnected] = useState (false)
 // hago una petición async para comprobar si esta instalada la wallet
+// Las funciones siempre en camelCase, solo los componentes van en PascalCase
 const ConnectWallet = () => {
-  window.ethereum ? (setConnected(true)):(setConnected(false))
+  setConnected(window.ethereum ? true : false)
 }
 return (
   <div>
